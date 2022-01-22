@@ -1,0 +1,35 @@
+$pinkish: #eedbf3;
+
+.headerDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainText {
+    color: $pinkish;
+    text-align: center;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: clamp(.5em, -0.26502rem + 4.37158vw, 2em);
+    h1 {
+        overflow: hidden;
+        border-right: .15em solid $pinkish;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+            typing 2.25s steps(40, end),
+            blinky .75s step-end infinite;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blinky {
+    from, to { border-color: transparent }
+    50% { border-color: $pinkish }
+}
