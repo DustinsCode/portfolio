@@ -19,8 +19,37 @@ $pinkish: #eedbf3;
         white-space: nowrap;
         margin: 0 auto;
         animation: 
-            typing 2.25s steps(40, end),
+            typing 2s steps(40, end),
             blinky .75s step-end infinite;
+    }
+
+    .actionButtons {
+
+        animation: fadeIn 3.75s;
+        display: flex;
+        justify-content: center;
+
+        button {
+            flex: 1 1 0px;
+            background: none;
+            margin: 1rem;
+            padding: .5rem;
+            width: auto;
+            color: $pinkish;
+            font-size: large;
+            border: solid 3px $pinkish;
+            border-radius: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                transform: scale(0.9);
+                transition: ease-in-out; 
+            }
+            
+        }
     }
 }
 
@@ -32,4 +61,10 @@ $pinkish: #eedbf3;
 @keyframes blinky {
     from, to { border-color: transparent }
     50% { border-color: $pinkish }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0 }
+    66% { opacity: 0 }
+    100% { opacity: 1 }
 }
