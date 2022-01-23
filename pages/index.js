@@ -16,7 +16,7 @@ export default function Home() {
         console.log('hit home')
         return (
           <div>
-            <h1>Let&apos;s make some cool shit.</h1>
+            <h1>Hey, let&apos;s make some cool shit.</h1>
             <div className={styles.actionButtons}>
               <button onClick={() => makeSelection('hellyeah')}>Hell Yeah!</button>
               <button onClick={() => makeSelection('what')}>What kinda cool shit?</button>

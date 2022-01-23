@@ -12,6 +12,8 @@ $pinkish: #eedbf3;
     text-align: center;
     padding-left: .5em;
     padding-right: .5em;
+
+    //TODO: actually calculate this stuff.  Adding more text made it go off screen on ipads
     font-size: clamp(.5em, -0.26502rem + 4.37158vw, 2em);
     h1 {
         overflow: hidden;
@@ -27,10 +29,13 @@ $pinkish: #eedbf3;
 
         animation: fadeIn 3.75s;
         display: flex;
-        justify-content: center;
+        justify-content:center;
+        flex-wrap: wrap;
 
         button {
-            flex: 1 1 0px;
+            flex-basis: 150px;
+            flex-grow: 1;
+            white-space: nowrap;
             background: none;
             margin: 1rem;
             padding: .5rem;
