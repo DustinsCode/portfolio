@@ -10,6 +10,9 @@ export default function Home() {
     setSelection(selection)
   }
 
+
+  //TODO: make these route to another page instead of render 
+  //       new html so back button will work
   function getSelection() {
     switch (selection) {
       case 'home':
