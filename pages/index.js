@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.scss'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -16,28 +17,29 @@ export default function Home() {
   function getSelection() {
     switch (selection) {
       case 'home':
-        console.log('hit home')
         return (
           <div>
             <h1>Hey, let&apos;s make some cool shit.</h1>
             <div className={styles.actionButtons}>
-              <button onClick={() => makeSelection('hellyeah')}>Hell Yeah!</button>
-              <button onClick={() => makeSelection('what')}>What kinda cool shit?</button>
-              <button onClick={() => makeSelection('who')}>Who even are you?</button>
+              <Link href="/contact" passHref>
+                <button>Hell Yeah!</button>
+              </Link>
+              <Link href="/portfolio" passHref>
+                <button>What kinda cool shit?</button>
+              </Link>
+              <Link href="/about" passHref>
+                <button onClick={() => makeSelection('who')}>Who are you?</button>
+              </Link>
             </div>
           </div>
         )
       case 'hellyeah':
-        console.log('hit hellyeah')
         return (<div>success</div>)
       case 'what':
-        console.log('hit what')
         return (<div>what?</div>)
       case 'who':
-        console.log('hit who')
         return (<div>who?</div>)
       default:
-        console.log('hit default')
         makeSelection('home')
     }
   }
